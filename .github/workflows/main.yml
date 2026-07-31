@@ -11,7 +11,7 @@ on:
       branch:
         description: "Branch"
         required: true
-        default: "aosp"
+        default: "los"
         type: string
         
       ksu:
