@@ -142,7 +142,7 @@ Applying ${DEVICE}_defconfig
 \`\`\`
 ⏳ delok konfigurasi kernel..."
 
-make O="$OUT" ARCH=arm64 "vendor/sdmsteppe-perf_defconfig"
+make O="$OUT" ARCH=arm64 "vendor/acis_defconfig"
 
 # ── Step 3: Compile ──────────────────────────────────────────────
 echo "[3/4] Compiling kernel..."
