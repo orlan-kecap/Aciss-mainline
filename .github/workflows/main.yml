@@ -33,7 +33,7 @@ jobs:
         run: |
           sudo apt update -y
           sudo apt install -y build-essential libncurses-dev bison flex libssl-dev libelf-dev dwarves bc rsync cpio python3 python3-pip git curl wget make lz4 zip unzip ccache zstd
-          sudo apt install -y fakeroot device-tree-compiler libdw-dev pkg-config lld llvm          
+          sudo apt install -y fakeroot device-tree-compiler libdw-dev pkg-config lld llvm tar          
      steps:
       - uses: actions/checkout@v2
       - uses: actionhippie/swap-space@v1
