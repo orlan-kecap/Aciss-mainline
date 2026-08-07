@@ -33,7 +33,10 @@ jobs:
       - uses: actionhippie/swap-space@v1
         with:
           size: 10G
-
+          
+      - name: ✅ Verify Swap
+        run: free -h
+        
       - name: 📦 Install Dependencies
         run: |
           sudo apt update -y
@@ -42,6 +45,7 @@ jobs:
 
       - name: 📥 Clone Kernel Source
         run: |
+          rm -rf kernel
           git clone -q --depth=1 -b ${{ github.event.inputs.branch }} ${{ github.event.inputs.repo }} kernel
 
       - name: 🧩 Setup KernelSU
