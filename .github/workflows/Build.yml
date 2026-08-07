@@ -52,8 +52,8 @@ jobs:
         if: ${{ github.event.inputs.ksu == 'KernelSU-Next' }}
         working-directory: kernel
         run: |
-          curl -LSs "https://raw.githubusercontent.com/orlan-kecap/KernelSU-Next/stable/kernel/setup.sh" | bash -s syscall
-
+          curl -LSs "https://raw.githubusercontent.com/Mr-Morat/KernelSU-Next/stable/kernel/setup.sh" | bash -s syscall
+          
       - name: ⛓️ Setup Toolchain
         working-directory: kernel
         run: |
