@@ -6,12 +6,12 @@ on:
       repo:
         description: 'URL repo kernel (kosongkan untuk pakai repo ini sendiri)'
         required: true
-        default: "https://github.com/Aciss21/Paranoid_Courbet.git"
+        default: "https://github.com/Aciss21/kernel_xiaomi_sm6150.git"
         type: string
       branch:
         description: "Branch"
         required: true
-        default: "ksu"
+        default: "16.2"
         type: string
       ksu:
         description: "KernelSU"
@@ -53,11 +53,6 @@ jobs:
         working-directory: kernel
         run: |
           curl -LSs "https://raw.githubusercontent.com/Mr-Morat/KernelSU-Next/stable/kernel/setup.sh" | bash -s syscall
-          
-      - name: ⛓️ Setup Toolchain
-        working-directory: kernel
-        run: |
-          bash setup.sh
 
       - name: 🔨 Build Kernel
         working-directory: kernel
